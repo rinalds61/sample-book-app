@@ -71,5 +71,5 @@ def build(){
     echo 'Build started'
     bat "ls"
     bat 'npm config ls'
-    bat 'npm install'
+    bat "npm install"
 }
