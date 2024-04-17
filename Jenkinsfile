@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-    tools {nodejs "nodejs"}
+    //tools {nodejs "nodejs"}
     stages {
         stage('Build') {
             steps {
@@ -71,5 +71,5 @@ def build(){
     echo 'Build started'
     bat "ls"
     bat 'npm config ls'
-    bat "npm install"
+    bat 'npm install'
 }
