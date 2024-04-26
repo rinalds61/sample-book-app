@@ -1,0 +1,25 @@
+inputs:
+  enviroment:
+    description: 'Enviroment for node aplication'
+    default: 'DEV'
+runs:
+  using: "composite"
+  steps:
+    - name: Print output
+      run: echo Testing on ${{inputs.enviroment}} has started
+      shell: bash
+
+    - name: Install dependencies and pm2
+      run: 
+        npm install
+        sudo npm install -g pm2
+      shell: bash
+
+    - name: Start services
+      run: pm2 start -n ${{inputs.enviroment}} index.js
+      shell: bash
+
+
+    - name: Start test
+      run: npm test
+      shell: bash
