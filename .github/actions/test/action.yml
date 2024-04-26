@@ -41,5 +41,6 @@ runs:
 
     - name: upload report artifact
     uses: actions/upload-artifact@v4.3.2
+    with:
       name: test-report
       path: api-tests/mochawesome-report
