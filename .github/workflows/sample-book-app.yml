@@ -1,0 +1,44 @@
+
+name: sample-book-app
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs: 
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run a one-line script
+        run: echo Build success
+
+  Tests:
+    name: Tests
+    runs-on: ubuntu-latest
+      
+    steps:      
+      - name: Run a one-line script
+        run: echo Test success
+  Deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+      
+    steps:      
+      - name: Run a one-line script
+        run: echo deploy success
+
+  Clean:
+    name: Clean
+    runs-on: ubuntu-latest
+      
+    steps:      
+      - name: Run a one-line script
+        run: echo clean success
