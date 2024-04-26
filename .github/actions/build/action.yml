@@ -3,6 +3,7 @@ runs:
   steps:
     - name: Build success
     run: echo Build of node application is starting
+    shell: bash
     - name: Install dependencies
     run: npm install
     shell: bash
