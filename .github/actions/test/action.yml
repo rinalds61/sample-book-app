@@ -38,3 +38,8 @@ runs:
         #echo Testing book test set on ${{inputs.enviroment}} has started..
         npm run books DEV
       shell: bash 
+
+    - name: upload report artifact
+    uses: actions/upload-artifact@v4.3.2
+      name: test-report
+      path: api/tests/mochawesome-report
