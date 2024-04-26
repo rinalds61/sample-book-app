@@ -21,7 +21,7 @@ runs:
 
     - name: Install  motcha
       run: 
-        sudo npm install mocha
+        sudo npm install -g mocha
       shell: bash   
 
     - name: Start services
