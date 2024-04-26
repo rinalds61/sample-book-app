@@ -19,6 +19,11 @@ runs:
         sudo npm install -g pm2
       shell: bash
 
+    - name: Install  motcha
+      run: 
+        sudo npm install mocha
+      shell: bash   
+
     - name: Start services
       run: pm2 start -n ${{inputs.enviroment}} index.js
       shell: bash
