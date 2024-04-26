@@ -47,6 +47,10 @@ jobs:
     needs: [Deploy-dev]  
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: 'rinalds61/api-automation'
+          path: 'api-tests'
       - uses: ./.github/actions/test
         with:
           enviroment: 'DEV'
