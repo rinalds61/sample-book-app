@@ -69,7 +69,7 @@ def test(String environment){
 }
 def build(){
     echo 'Build started'
-    bat "ls"
+    bat "dir"
     bat 'npm config ls'
     bat "npm install"
 }

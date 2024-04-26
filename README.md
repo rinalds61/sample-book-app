@@ -23,6 +23,11 @@ Start JS application as service using pm2 (custom port):
 pm2 start -n "My task name" index.js -o 1010
 pm2 start -n "My task name" index.js -o 1020
 pm2 start -n "My task name" index.js -o 1030
+pm2 start index.js -n DEV -o 1010 -- -a 0.0.0.0
+pm2 kill
+pm2 start index.js -n DEV -o 1010
+
+
 ```
 
 List pm2 services:
