@@ -19,6 +19,11 @@ jobs:
 
       - name: Run a one-line script
         run: echo Build started
+        
+      - name: ...check node and npm version...
+        run:
+          node -v
+          npm -v
 
   Deploy-dev:
     name: Deploy-DEV
