@@ -16,14 +16,17 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+      - uses: ./.github/actions/build
 
-      - name: Run a one-line script
-        run: echo Build started
-        
-      - name: ...check node and npm version...
-        run:
-          node -v
-          npm -v
+#      - name: Run a one-line script
+#        run: echo Build started
+
+#      - name: ...check node and npm version...
+#        run:
+#          node -v
+#          npm -v
+#          pm2 delete ${enviroment}
+#          pm2 start -n \"${enviroment}\" index.js -- ${port}
 
   Deploy-dev:
     name: Deploy-DEV
