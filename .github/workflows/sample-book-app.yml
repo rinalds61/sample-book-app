@@ -36,7 +36,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/deploy
         with:
-          port: 2345
+          port: 1050
           enviroment: 'DEV'
 
 
