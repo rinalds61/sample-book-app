@@ -30,6 +30,6 @@ runs:
     - name: ababa
       working-directory: api-tests
       run:
-        echo Testing book test set on ${{inputs.enviroment}} has started..
+        #echo Testing book test set on ${{inputs.enviroment}} has started..
         npm run books DEV
       shell: bash 
